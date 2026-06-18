@@ -42,7 +42,7 @@ export default function Footer_Section() {
 
             <div className="responsive-box flex justify-between items-start mb-[6vw]"
             >
-                <img src="/logo.svg" className="w-[12.8vw] h-[5.139vw] max-w-[184.32px] max-h-[74px]" />
+                <img src="/logo.svg" className="w-[12.8vw] h-[5.139vw] max-w-[184.32px] max-h-[74px] cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
 
                 <div className="flex gap-[0.83vw]">
                     {socials.map((social) => (

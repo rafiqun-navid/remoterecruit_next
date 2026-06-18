@@ -2,7 +2,7 @@
 
 import React from "react";
 
-type ButtonVariant = "primary" | "secondary";
+type ButtonVariant = "primary" | "secondary" | "none";
 
 interface ButtonProps {
   title?: string;
@@ -16,8 +16,9 @@ interface ButtonProps {
 }
 
 const styles: Record<ButtonVariant, string> = {
-  primary: "bg-gradient-to-br from-[#2b6cb0] to-[#1a365d] text-white",
-  secondary: "border-2 border-transparent text-[#1e3e85]",
+  primary: "text-white bg-[#49A0C6] hover:bg-[#2b6cb0] cursor-pointer transition-all duration-300 ease-in-out",
+  secondary: "border-2 border-transparent text-[#1e3e85] cursor-pointer hover:bg-[#49A0C6] transition-all duration-300 ease-in-out",
+  none: "cursor-pointer",
 };
 
 export default function Button({

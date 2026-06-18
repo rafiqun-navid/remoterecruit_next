@@ -1,4 +1,6 @@
 "use client";
+import Header from "./Header_Component";
+import Hero_title from "./Hero_title";
 
 export default function Hero_Section() {
     return (
@@ -10,6 +12,9 @@ export default function Hero_Section() {
                 aspectRatio: "4320 / 2112"
             }}
         >
+            <Header />
+            <Hero_title />
+
 
         </div>
     );

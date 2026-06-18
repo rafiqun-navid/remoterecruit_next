@@ -29,7 +29,12 @@ export default function PackageCard({
             <div className=" flex-1 flex gap-[clamp(16px,1.87vw,27px)] justify-center">
                 {/* Top-left */}
                 <div className={` ${paidpackage ? "relative" : ""} h-full w-[clamp(100px,11.11vw,160px)] bg-[#ecf2ff] rounded-[clamp(12px,1.11vw,16px)] flex flex-col items-center justify-center`}>
-                    {paidpackage && <div className="absolute bg-[#C2EEFF] -top-[22px] w-[146px] h-[44px]  rounded-full shadow-[0_4px_10px_-4px_rgba(20,20,20,0.2)]"></div>}
+                    {paidpackage && <div className="absolute bg-[#C2EEFF] -top-[clamp(16px,1.52vw,22px)] w-[clamp(90px,10.13vw,146px)] h-[clamp(32px,3.05vw,44px)] rounded-full shadow-[0_4px_10px_-4px_rgba(20,20,20,0.2)] flex items-center justify-start p-[clamp(6px,0.55vw,8px)] gap-[clamp(4px,0.55vw,8px)]">
+                        <div className="flex items-center justify-center w-[clamp(24px,2.5vw,36px)] h-[clamp(24px,2.5vw,36px)] flex-shrink-0 bg-white rounded-full shadow-md">
+                            <Icon name={"dime"} size={25} className="w-[clamp(12px,1.11vw,16px)] h-[clamp(12px,1.11vw,16px)]" />
+                        </div>
+                        <h3 className="font-semibold text-[clamp(12px,1.11vw,16px)] text-[#1e3e85]">Premium</h3>
+                    </div>}
                     <h1 className={`font-semibold text-[clamp(20px,2.22vw,32px)] ${paidpackage ? "text-transparent bg-clip-text bg-gradient-to-br from-[#2b6cb0] to-[#1a365d]" : "text-[#52B4DA]"}`} >{price}</h1>
                     <h2 className=" font-medium text-[clamp(14px,1.38vw,20px)] text-[#959AAC]" >{badgeTitle}</h2>
                 </div>
@@ -44,7 +49,7 @@ export default function PackageCard({
                 </div>
             </div>
             {/* CTA */}
-            <Button title="Get Started" variant={paidpackage ? "primary" : "secondary"} className={`h-[clamp(48px,5vw,72px)] rounded-[clamp(16px,1.66vw,24px)] font-medium text-[clamp(14px,1.38vw,20px)] mt-[clamp(16px,1.94vw,28px)] `} />
+            <Button title="Get Started" variant={paidpackage ? "primary" : "secondary"} className={`h-[clamp(48px,5vw,72px)] rounded-[clamp(16px,1.66vw,24px)] font-medium text-[clamp(14px,1.38vw,20px)] mt-[clamp(16px,1.94vw,28px)] bg-gradient-to-br from-[#2b6cb0] to-[#1a365d]  `} />
         </div>
     );
 }
