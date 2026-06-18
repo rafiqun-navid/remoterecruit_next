@@ -1,14 +1,15 @@
 "use client";
 
-import Button from "@/components/Button";
-import Image from "next/image";
+import Hero_Section from "@/components/sections/Hero_Section";
+import Footer_Section from "@/components/sections/Footer_Section";
+import Body_Section from "@/components/sections/Body_Section";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-4xl font-bold">Hello, Next.js!</h1>
-      <Button title="Click me" variant="primary" onClick={() => alert("Hello!")} />
-      <p className="mt-4 text-lg">Welcome to your Next.js application.</p>
+    <div className="min-h-screen">
+      <Hero_Section />
+      <Body_Section />
+      <Footer_Section />
     </div>
-  )
+  );
 }
