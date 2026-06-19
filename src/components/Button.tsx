@@ -16,9 +16,9 @@ interface ButtonProps {
 }
 
 const styles: Record<ButtonVariant, string> = {
-  primary: "text-white bg-brand-cyan-medium hover:bg-brand-blue-gradient-start cursor-pointer transition-all duration-300 ease-in-out",
-  secondary: "border-2 border-transparent text-brand-blue cursor-pointer hover:bg-brand-cyan-medium transition-all duration-300 ease-in-out",
-  none: "cursor-pointer",
+  primary: "text-white bg-brand-cyan-medium hover:bg-brand-blue-gradient-start cursor-pointer transition-colors duration-200",
+  secondary: "border-2 border-transparent text-brand-blue cursor-pointer hover:opacity-80 transition-opacity duration-200",
+  none: "cursor-pointer hover:opacity-70 transition-opacity duration-200",
 };
 
 export default function Button({

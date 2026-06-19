@@ -10,7 +10,7 @@ export default function PackageCard({
     paidpackage,
 }: PackageCardProps) {
     return (
-        <div className="w-[34.72vw] h-[23.82vw] max-w-[500px] max-h-[343px] min-w-[320px] bg-white rounded-[clamp(16px,1.94vw,28px)] p-[clamp(20px,2.22vw,32px)] shadow-[0_12px_30px_-12px_rgba(20,20,20,0.2)] flex flex-col">
+        <div className="w-[34.72vw] h-[23.82vw] max-w-[500px] max-h-[343px] min-w-[320px] bg-white rounded-[clamp(16px,1.94vw,28px)] p-[clamp(20px,2.22vw,32px)] shadow-[0_12px_30px_-12px_rgba(20,20,20,0.2)] hover:shadow-[0_15px_35px_-10px_rgba(20,20,20,0.25)] transition-shadow duration-200 flex flex-col group">
             {/* Top */}
             <div className=" flex-1 flex gap-[clamp(16px,1.87vw,27px)] justify-center">
                 {/* Top-left */}

@@ -10,7 +10,7 @@ export default function PackageCard_Mobile({
     paidpackage,
 }: PackageCardProps) {
     return (
-        <div className="w-[85vw] max-w-[360px] h-auto bg-white rounded-3xl p-6 shadow-[0_12px_30px_-12px_rgba(20,20,20,0.2)] flex flex-col">
+        <div className="w-[85vw] max-w-[360px] h-auto bg-white rounded-3xl p-6 shadow-[0_12px_30px_-12px_rgba(20,20,20,0.2)] hover:shadow-[0_15px_35px_-10px_rgba(20,20,20,0.25)] transition-shadow duration-200 flex flex-col group">
             <div className="flex flex-col gap-6">
                 {/* Price Box */}
                 <div className={` ${paidpackage ? "relative" : ""} w-full py-6 bg-brand-blue-soft rounded-2xl flex flex-col items-center justify-center`}>
