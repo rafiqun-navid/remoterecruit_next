@@ -13,6 +13,58 @@
   }
   .paragraph {
     font-size: clamp(15px, 1.32vw, 19px);
-    @apply text-gray-500 leading-relaxed lg:max-w-[500px];
+    @apply text-brand-gray-text leading-relaxed lg:max-w-[500px];
+  }
+
+  /* Exact UI match tokens for refactoring */
+  .card-price {
+    font-size: clamp(20px, 2.22vw, 32px);
+    @apply font-semibold;
+  }
+  .card-price-mobile {
+    @apply text-[32px] font-semibold;
+  }
+
+  .card-badge {
+    font-size: clamp(14px, 1.38vw, 20px);
+    @apply font-medium;
+  }
+  .card-badge-mobile {
+    @apply text-[16px] font-medium;
+  }
+
+  .card-feature {
+    font-size: clamp(12px, 1.11vw, 16px);
+  }
+  .card-feature-mobile {
+    @apply text-[14px] font-medium;
+  }
+
+  .card-title {
+    font-size: clamp(12px, 1.11vw, 16px);
+    @apply font-semibold;
+  }
+  .card-title-mobile {
+    @apply text-[13px] font-semibold;
+  }
+
+  .faq-question {
+    @apply text-[18px] lg:text-[22px] font-semibold;
+  }
+  .faq-answer {
+    @apply text-[15px] lg:text-[18px] leading-relaxed;
+  }
+
+  .banner-label {
+    @apply text-[16px] font-semibold;
+  }
+  .banner-heading {
+    @apply text-[44px] leading-[56px] font-semibold;
+  }
+  .banner-paragraph {
+    @apply text-[18px] leading-[33px] font-normal;
+  }
+  .banner-btn-text {
+    @apply text-[16px] font-medium;
   }
 }

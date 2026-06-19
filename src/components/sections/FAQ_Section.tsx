@@ -15,10 +15,10 @@ export default function FAQ_Section() {
                 <div className="flex flex-col gap-[32px] lg:gap-[48px]">
                     {qaData.map((item, index) => (
                         <div key={index} className="flex flex-col gap-2 lg:gap-4">
-                            <h3 className="font-semibold text-[18px] lg:text-[22px] text-brand-black">
+                            <h3 className="faq-question text-brand-black">
                                 {item.question}
                             </h3>
-                            <p className="text-[15px] lg:text-[18px] text-brand-gray-text leading-relaxed">
+                            <p className="faq-answer text-brand-gray-text">
                                 {item.answer}
                             </p>
                         </div>

@@ -18,4 +18,8 @@
   --color-brand-white-translucent: #ffffff50;
   --color-brand-cyan-medium: #49A0C6;
   --color-brand-foreground: #171717;
+
+  /* Banner specific colors */
+  --color-brand-blue-accent: #4572CB;
+  --color-brand-gray-muted: #767784;
 }

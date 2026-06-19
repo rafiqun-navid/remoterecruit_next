@@ -18,10 +18,10 @@ export default function PackageCard_Mobile({
                         <div className="flex items-center justify-center w-[24px] h-[24px] flex-shrink-0 bg-white rounded-full shadow-md">
                             <Icon name={"dime"} size={18} className="w-[12px] h-[12px]" />
                         </div>
-                        <h3 className="font-semibold text-[13px] text-brand-blue">Premium</h3>
+                        <h3 className="card-title-mobile text-brand-blue">Premium</h3>
                     </div>}
-                    <h1 className={`font-semibold text-[32px] ${paidpackage ? "text-transparent bg-clip-text bg-gradient-to-br from-brand-blue-gradient-start to-brand-blue-gradient-end" : "text-brand-cyan"}`} >{price}</h1>
-                    <h2 className="font-medium text-[16px] text-brand-gray-text mt-1">{badgeTitle}</h2>
+                    <h1 className={`card-price-mobile ${paidpackage ? "text-transparent bg-clip-text bg-gradient-to-br from-brand-blue-gradient-start to-brand-blue-gradient-end" : "text-brand-cyan"}`} >{price}</h1>
+                    <h2 className="card-badge-mobile text-brand-gray-text mt-1">{badgeTitle}</h2>
                 </div>
 
                 {/* Features List */}
@@ -29,14 +29,14 @@ export default function PackageCard_Mobile({
                     {features.map((feature: Feature, index: number) => (
                         <div key={index} className="flex items-center gap-3">
                             <Icon name={feature.included ? "tick" : "cross"} size={16} className="w-[16px] h-[16px] flex-shrink-0" />
-                            <span className={`text-[14px] font-medium ${feature.included ? "text-brand-black" : "text-brand-gray-feature  opacity-70"}`}>{feature.text}</span>
+                            <span className={`card-feature-mobile ${feature.included ? "text-brand-black" : "text-brand-gray-feature  opacity-70"}`}>{feature.text}</span>
                         </div>
                     ))}
                 </div>
             </div>
 
             {/* CTA */}
-            <Button title="Get Started" variant={paidpackage ? "primary" : "secondary"} className={`w-full h-[54px] rounded-2xl font-medium text-[16px] mt-8 ${paidpackage ? "bg-gradient-to-br from-brand-blue-gradient-start to-brand-blue-gradient-end" : ""}`} />
+            <Button title="Get Started" variant={paidpackage ? "primary" : "secondary"} className={`w-full h-[54px] rounded-2xl card-badge-mobile mt-8 ${paidpackage ? "bg-gradient-to-br from-brand-blue-gradient-start to-brand-blue-gradient-end" : ""}`} />
         </div>
     );
 }
