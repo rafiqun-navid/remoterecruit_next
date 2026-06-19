@@ -56,15 +56,19 @@
   }
 
   .banner-label {
-    @apply text-[16px] font-semibold;
+    font-size: clamp(12px, 1.11vw, 16px);
+    @apply font-semibold;
   }
   .banner-heading {
-    @apply text-[44px] leading-[56px] font-semibold;
+    font-size: clamp(32px, 3.05vw, 44px);
+    @apply leading-[1.2] font-semibold;
   }
   .banner-paragraph {
-    @apply text-[18px] leading-[33px] font-normal;
+    font-size: clamp(14px, 1.25vw, 18px);
+    @apply leading-[1.8] font-normal;
   }
   .banner-btn-text {
-    @apply text-[16px] font-medium;
+    font-size: clamp(12px, 1.11vw, 16px);
+    @apply font-medium;
   }
 }
