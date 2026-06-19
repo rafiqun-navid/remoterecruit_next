@@ -34,7 +34,7 @@ export default function Footer_Section() {
 
             <div className="responsive-box flex-1 lg:flex-none flex flex-col lg:flex-row gap-10 lg:gap-0 justify-center lg:justify-between items-center lg:items-start pt-12 lg:pt-0 mb-0 lg:mb-[6vw]"
             >
-                <img src="/logo.svg" alt="Remote Recruit Logo" className="w-[180px] lg:w-[12.8vw] lg:h-[5.139vw] max-w-[184.32px] max-h-[74px] cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
+                <img src="/Logo.svg" alt="Remote Recruit Logo" className="w-[180px] lg:w-[12.8vw] lg:h-[5.139vw] max-w-[184.32px] max-h-[74px] cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
 
                 <div className="flex gap-4 lg:gap-[0.83vw]">
                     {socials.map((social) => (
