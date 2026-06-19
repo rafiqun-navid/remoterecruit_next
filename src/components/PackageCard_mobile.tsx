@@ -1,0 +1,56 @@
+import React from "react";
+import Icon from "./Icon_Component";
+import Button from "./Button";
+
+
+interface Feature {
+    text: string;
+    included: boolean;
+}
+
+interface PackageCardProps {
+    price: string;
+    badgeTitle: string;
+    features: Feature[];
+    paidpackage: boolean;
+    onCtaClick?: () => void;
+}
+
+export default function PackageCard_Mobile({
+    price,
+    badgeTitle,
+    features,
+    paidpackage,
+    onCtaClick,
+}: PackageCardProps) {
+    return (
+        <div className="w-[85vw] max-w-[360px] h-auto bg-white rounded-3xl p-6 shadow-[0_12px_30px_-12px_rgba(20,20,20,0.2)] flex flex-col">
+            <div className="flex flex-col gap-6">
+                {/* Price Box */}
+                <div className={` ${paidpackage ? "relative" : ""} w-full py-6 bg-brand-blue-soft rounded-2xl flex flex-col items-center justify-center`}>
+                    {paidpackage && <div className="absolute bg-brand-cyan-soft -top-[18px] w-[110px] h-[36px] rounded-full shadow-[0_4px_10px_-4px_rgba(20,20,20,0.2)] flex items-center justify-center p-1.5 gap-1">
+                        <div className="flex items-center justify-center w-[24px] h-[24px] flex-shrink-0 bg-white rounded-full shadow-md">
+                            <Icon name={"dime"} size={18} className="w-[12px] h-[12px]" />
+                        </div>
+                        <h3 className="font-semibold text-[13px] text-brand-blue">Premium</h3>
+                    </div>}
+                    <h1 className={`font-semibold text-[32px] ${paidpackage ? "text-transparent bg-clip-text bg-gradient-to-br from-brand-blue-gradient-start to-brand-blue-gradient-end" : "text-brand-cyan"}`} >{price}</h1>
+                    <h2 className="font-medium text-[16px] text-brand-gray-text mt-1">{badgeTitle}</h2>
+                </div>
+
+                {/* Features List */}
+                <div className="flex flex-col gap-3 px-2">
+                    {features.map((feature: Feature, index: number) => (
+                        <div key={index} className="flex items-center gap-3">
+                            <Icon name={feature.included ? "tick" : "cross"} size={16} className="w-[16px] h-[16px] flex-shrink-0" />
+                            <span className={`text-[14px] font-medium ${feature.included ? "text-brand-black" : "text-brand-gray-feature  opacity-70"}`}>{feature.text}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* CTA */}
+            <Button title="Get Started" variant={paidpackage ? "primary" : "secondary"} className={`w-full h-[54px] rounded-2xl font-medium text-[16px] mt-8 ${paidpackage ? "bg-gradient-to-br from-brand-blue-gradient-start to-brand-blue-gradient-end" : ""}`} />
+        </div>
+    );
+}
