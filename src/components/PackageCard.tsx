@@ -1,27 +1,13 @@
 import React from "react";
 import Icon from "./Icon_Component";
 import Button from "./Button";
-
-
-interface Feature {
-    text: string;
-    included: boolean;
-}
-
-interface PackageCardProps {
-    price: string;
-    badgeTitle: string;
-    features: Feature[];
-    paidpackage: boolean;
-    onCtaClick?: () => void;
-}
+import { Feature, PackageCardProps } from "@/types";
 
 export default function PackageCard({
     price,
     badgeTitle,
     features,
     paidpackage,
-    onCtaClick,
 }: PackageCardProps) {
     return (
         <div className="w-[34.72vw] h-[23.82vw] max-w-[500px] max-h-[343px] min-w-[320px] bg-white rounded-[clamp(16px,1.94vw,28px)] p-[clamp(20px,2.22vw,32px)] shadow-[0_12px_30px_-12px_rgba(20,20,20,0.2)] flex flex-col">

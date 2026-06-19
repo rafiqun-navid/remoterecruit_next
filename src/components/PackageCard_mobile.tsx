@@ -1,27 +1,13 @@
 import React from "react";
 import Icon from "./Icon_Component";
 import Button from "./Button";
-
-
-interface Feature {
-    text: string;
-    included: boolean;
-}
-
-interface PackageCardProps {
-    price: string;
-    badgeTitle: string;
-    features: Feature[];
-    paidpackage: boolean;
-    onCtaClick?: () => void;
-}
+import { Feature, PackageCardProps } from "@/types";
 
 export default function PackageCard_Mobile({
     price,
     badgeTitle,
     features,
     paidpackage,
-    onCtaClick,
 }: PackageCardProps) {
     return (
         <div className="w-[85vw] max-w-[360px] h-auto bg-white rounded-3xl p-6 shadow-[0_12px_30px_-12px_rgba(20,20,20,0.2)] flex flex-col">

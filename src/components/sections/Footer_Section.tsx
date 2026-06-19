@@ -1,4 +1,5 @@
 'use client'
+/* eslint-disable @next/next/no-img-element */
 
 import Icon from "../Icon_Component";
 import socials from "@/data/socials.json";
@@ -33,9 +34,9 @@ export default function Footer_Section() {
 
             <div className="responsive-box flex-1 lg:flex-none flex flex-col lg:flex-row gap-10 lg:gap-0 justify-center lg:justify-between items-center lg:items-start pt-12 lg:pt-0 mb-0 lg:mb-[6vw]"
             >
-                <img src="/logo.svg" className="w-[180px] lg:w-[12.8vw] lg:h-[5.139vw] max-w-[184.32px] max-h-[74px] cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
+                <img src="/logo.svg" alt="Remote Recruit Logo" className="w-[180px] lg:w-[12.8vw] lg:h-[5.139vw] max-w-[184.32px] max-h-[74px] cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
 
-                <div className="flex gap-4 md:gap-[0.83vw]">
+                <div className="flex gap-4 lg:gap-[0.83vw]">
                     {socials.map((social) => (
                         <a
                             key={social.name}
@@ -44,7 +45,7 @@ export default function Footer_Section() {
                             rel="noopener noreferrer"
                             className="w-[40px] h-[40px] lg:w-[2.78vw] lg:h-[2.78vw] max-w-[32px] max-h-[32px] p-[8px] lg:p-[min(0.75vw,8px)] rounded-full border border-white/20 flex items-center justify-center bg-brand-footer-icon-bg hover:bg-white/10 text-white hover:border-white transition-all cursor-pointer"
                         >
-                            <Icon name={social.name as any} size="100%" />
+                            <Icon name={social.name as keyof typeof import('@/assets/icons').default} size="100%" />
                         </a>
                     ))}
                 </div>
@@ -52,7 +53,7 @@ export default function Footer_Section() {
             </div>
 
             <div className=" w-full flex justify-center items-center py-[20px] border-t-[1px] border-brand-white-translucent">
-                <img src="/RR_logo.svg" className="h-[32px] w-[40px] lg:h-[2.22vw] lg:w-[2.78vw] max-h-[32px] max-w-[40px]" />
+                <img src="/RR_logo.svg" alt="RR Logo mark" className="h-[32px] w-[40px] lg:h-[2.22vw] lg:w-[2.78vw] max-h-[32px] max-w-[40px]" />
             </div>
         </div>
     );
