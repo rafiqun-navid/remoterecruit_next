@@ -1,0 +1,14 @@
+@layer components {
+  .heading-1 {
+    @apply text-[53px] font-bold text-center leading-tight tracking-tight;
+  }
+  .heading-2 {
+    @apply text-[40px] font-semibold leading-tight max-w-[550px];
+  }
+  .subtitle {
+    @apply text-[20px] font-normal max-w-[840px] text-center leading-[1.6] text-white/90;
+  }
+  .paragraph {
+    @apply text-[19px] text-gray-500 leading-relaxed max-w-[500px];
+  }
+}

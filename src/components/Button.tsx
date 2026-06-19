@@ -16,8 +16,8 @@ interface ButtonProps {
 }
 
 const styles: Record<ButtonVariant, string> = {
-  primary: "text-white bg-[#49A0C6] hover:bg-[#2b6cb0] cursor-pointer transition-all duration-300 ease-in-out",
-  secondary: "border-2 border-transparent text-[#1e3e85] cursor-pointer hover:bg-[#49A0C6] transition-all duration-300 ease-in-out",
+  primary: "text-white bg-brand-cyan-medium hover:bg-brand-blue-gradient-start cursor-pointer transition-all duration-300 ease-in-out",
+  secondary: "border-2 border-transparent text-brand-blue cursor-pointer hover:bg-brand-cyan-medium transition-all duration-300 ease-in-out",
   none: "cursor-pointer",
 };
 
@@ -34,7 +34,7 @@ export default function Button({
   const isIconOnly = icon && !title;
 
   const secondaryStyle = variant === "secondary" ? {
-    background: "linear-gradient(white, white) padding-box, linear-gradient(135deg, #2b6cb0, #1a365d) border-box"
+    background: "linear-gradient(white, white) padding-box, linear-gradient(135deg, var(--color-brand-blue-gradient-start), var(--color-brand-blue-gradient-end)) border-box"
   } : {};
 
   return (
