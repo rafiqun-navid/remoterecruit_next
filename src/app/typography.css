@@ -1,14 +1,18 @@
 @layer components {
   .heading-1 {
-    @apply text-[53px] font-bold text-center leading-tight tracking-tight;
+    font-size: clamp(36px, 3.68vw, 53px);
+    @apply font-bold text-center leading-tight tracking-tight;
   }
   .heading-2 {
-    @apply text-[40px] font-semibold leading-tight max-w-[550px];
+    font-size: clamp(28px, 2.78vw, 40px);
+    @apply font-semibold leading-tight lg:max-w-[550px];
   }
   .subtitle {
-    @apply text-[20px] font-normal max-w-[840px] text-center leading-[1.6] text-white/90;
+    font-size: clamp(16px, 1.39vw, 20px);
+    @apply font-normal w-full max-w-[840px] text-center leading-[1.6] text-white/90;
   }
   .paragraph {
-    @apply text-[19px] text-gray-500 leading-relaxed max-w-[500px];
+    font-size: clamp(15px, 1.32vw, 19px);
+    @apply text-gray-500 leading-relaxed lg:max-w-[500px];
   }
 }

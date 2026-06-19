@@ -8,7 +8,6 @@ interface TwoColumnSectionProps {
   label: string;
   title: string;
   description: string;
-  /** If true, image appears before the text (flex‑row‑reverse). */
   reverse?: boolean;
 }
 
@@ -22,12 +21,11 @@ export default function TwoColumnSection({
 }: TwoColumnSectionProps) {
   return (
     <div
-      className={`w-full pt-30 responsive-box flex items-center justify-between gap-20 ${
-        reverse ? "flex-row-reverse" : ""
-      }`}
+      className={`w-full pt-16 lg:pt-30 mb-16 lg:mb-30 responsive-box flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-20 ${reverse ? "lg:flex-row-reverse" : ""
+        }`}
     >
       <TextPanel label={label} title={title} description={description} />
-      <img src={imageSrc} className="h-[451px] w-[454px]" alt={imageAlt} />
+      <img src={imageSrc} className="w-full h-auto max-w-[454px] lg:w-[clamp(250px,31.53vw,454px)] lg:h-[clamp(248px,31.32vw,451px)] object-contain" alt={imageAlt} />
     </div>
   );
 }

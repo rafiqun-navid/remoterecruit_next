@@ -27,7 +27,5 @@ body {
 }
 
 .responsive-box {
-  width: 72.22vw;
-  margin-left: auto;
-  margin-right: auto;
+  @apply w-[90vw] lg:w-[72.22vw] mx-auto;
 }

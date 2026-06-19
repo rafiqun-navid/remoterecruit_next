@@ -3,7 +3,6 @@
 
 
 
-// textpanel props interface
 interface TextPanelProps {
     label: string;
     title: string;

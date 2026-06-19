@@ -2,7 +2,7 @@
 
 export default function Hero_title() {
     return (
-        <div className="flex flex-1 flex-col gap-[24px] justify-center items-center text-white px-4 -mt-[180px]">
+        <div className="flex flex-1 flex-col gap-6 lg:gap-[24px] justify-center items-center text-white px-4 lg:-mt-[180px]">
             <h1 className="heading-1">RemoteRecruit’s Difference</h1>
             <p className="subtitle">RemoteRecruit is connecting the world with an easy-to-use platform that lets
                 full-time, part-time, and freelance workers showcase their talents to
