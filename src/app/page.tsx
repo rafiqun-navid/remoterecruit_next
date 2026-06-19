@@ -23,9 +23,9 @@ export default function Home() {
           reverse={section.reverse}
         />
       ))}
-      <div className="hidden lg:block">
-        <Banner_section />
-      </div>
+
+      <Banner_section />
+
       <FAQ_Section />
       <Pricing_Section_Mobile />
       <Footer_Section />
