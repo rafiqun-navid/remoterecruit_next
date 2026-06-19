@@ -7,6 +7,7 @@ import X from "./x.svg";
 import tick from "./tick.svg";
 import cross from "./cross.svg";
 import dime from "./dime.svg";
+import arrow from "./arrow.svg";
 
 export const icons = {
     facebook: Facebook,
@@ -17,7 +18,8 @@ export const icons = {
     x: X,
     tick: tick,
     cross: cross,
-    dime: dime
+    dime: dime,
+    arrow: arrow
 
 };
 
